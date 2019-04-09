@@ -14,10 +14,12 @@ int main(int argc, char **argv)
      cerr << endl << "Usage: ./path_to_PF_ORB path_to_vocabulary path_to_settings path_to_dev_video" << endl;
      return 1;
    }
-   cv::VideoCapture cap(0);
+const std::string url = "http://172.29.242.106:80/live";
+   cv::VideoCapture cap(url);
    if (!cap.isOpened())
    {
      cerr << endl  <<"Could not open camera feed."  << endl;
+	perror("This is the error");
      return -1;
    }
    // Create SLAM system. It initializes all system threads and gets ready to process frames.

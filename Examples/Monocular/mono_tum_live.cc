@@ -11,10 +11,10 @@ int main(int argc, char **argv)
 {
    if(argc != 3) 
    {
-     cerr << endl << "Usage: ./path_to_PF_ORB path_to_vocabulary path_to_settings path_to_dev_video" << endl;
+     cerr << endl << "Usage: ./path_to_PF_ORB path_to_vocabulary path_to_settings" << endl;
      return 1;
    }
-const std::string url = "http://172.29.242.106:80/live";
+const std::string url = "http://192.168.1.6:8081/live";
    cv::VideoCapture cap(url);
    if (!cap.isOpened())
    {
